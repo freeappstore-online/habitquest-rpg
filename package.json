@@ -8,7 +8,6 @@
     "dev": "pnpm --filter @habitquest-rpg/web dev",
     "build": "pnpm --filter @habitquest-rpg/web build",
     "preview": "pnpm --filter @habitquest-rpg/web preview",
-    "typecheck": "pnpm --filter @habitquest-rpg/web exec tsc -b",
-    "test": "pnpm --filter @habitquest-rpg/web test"
+    "typecheck": "pnpm --filter @habitquest-rpg/web exec tsc -b"
   }
 }

@@ -327,7 +327,7 @@ export default function App() {
         ...prev,
         character: { ...prev.character, gold: prev.character.gold - item.cost },
         gear: prev.gear.map(g => g.id === gearId ? { ...g, owned: true } : g),
-        log: [{ id: `buy_${Date.now()}`, message: `🛒 Purchased "${item.name}" for ${item.cost} Gold!`, type: "purchase", timestamp: Date.now() }, ...prev.log].slice(0, 50),
+        log: [{ id: `buy_${Date.now()}`, message: `🛒 Purchased "${item.name}" for ${item.cost} Gold!`, type: "purchase" as const, timestamp: Date.now() }, ...prev.log].slice(0, 50),
       };
     });
   }, []);

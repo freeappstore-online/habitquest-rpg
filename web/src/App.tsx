@@ -124,7 +124,8 @@ const CLASS_ACCENT: Record<string, string> = {
 const XP_PER_LEVEL = (level: number) => Math.floor(100 * Math.pow(1.4, level - 1));
 
 function todayStr() {
-  return new Date().toISOString().slice(0, 10);
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
 function createDefaultState(): GameState {
